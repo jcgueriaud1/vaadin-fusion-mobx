@@ -42,13 +42,23 @@ export class TaskListView extends MobxLitElement {
   }
 
   async addTask() {
+    console.log("addTask");
     await this.binder.submitTo(store.saveTodo.bind(store));
     this.binder.clear();
   }
 
-  updateTodoStatus(todo: Todo, e: CustomEvent) {
-    todo.done = e.detail.value;
+  updateTodoStatusChange(todo: Todo, e: CustomEvent) {
+    console.log("updateTodoStatusChange");
+    debugger;
+    todo.done = (e.target as HTMLInputElement).checked;
     store.saveTodo(todo);
+  }
+  updateTodoStatus(todo: Todo, e: CustomEvent) {
+    console.log("updateTodoStatus");
+    if (todo.done !== e.detail.value) {
+      todo.done = e.detail.value;
+      store.saveTodo(todo);
+    }
   }
 
   static get styles() {

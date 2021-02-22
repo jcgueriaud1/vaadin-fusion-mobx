@@ -51,7 +51,10 @@
     "@vaadin/vaadin-upload": "4.4.1",
     "lit-element": "2.3.1",
     "mobx": "^6.0.4",
-    "open": "^7.2.1"
+    "open": "^7.2.1",
+    "sockjs-client": "1.5.0",
+    "@stomp/stompjs": "6.0.0",
+    "@types/sockjs-client": "1.5.0"
   },
   "devDependencies": {
     "@types/validator": "13.1.0",
@@ -125,7 +128,10 @@
       "@vaadin/vaadin-date-time-picker": "1.4.0",
       "lit-element": "2.3.1",
       "@vaadin/vaadin-avatar": "1.0.2",
-      "open": "^7.2.1"
+      "open": "^7.2.1",
+      "sockjs-client": "1.5.0",
+      "@stomp/stompjs": "6.0.0",
+      "@types/sockjs-client": "1.5.0"
     },
     "devDependencies": {
       "webpack-babel-multi-target-plugin": "2.3.3",
@@ -151,6 +157,6 @@
       "lit-css-loader": "0.0.4",
       "extract-loader": "5.1.0"
     },
-    "hash": "1b621621a792f33e4df4728e6e59f7dfc7898aeaf6528a5e306bec1e9f72fa99"
+    "hash": "ee22c4c513654cdea8a765fb4261dc7e44978e8be26e6b11417613534630925d"
   }
 }
