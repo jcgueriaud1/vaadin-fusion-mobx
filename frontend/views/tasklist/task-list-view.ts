@@ -1,4 +1,4 @@
-import { css, customElement, html } from "lit-element";
+import {css, customElement, html, query} from "lit-element";
 import { MobxLitElement } from "@adobe/lit-mobx";
 import "@vaadin/vaadin-button";
 import "@vaadin/vaadin-text-field";
@@ -8,10 +8,14 @@ import { Binder, field } from "@vaadin/form";
 import TodoModel from "../../generated/com/example/application/TodoModel";
 import Todo from "../../generated/com/example/application/Todo";
 import { store } from "../../store";
+import type {TextFieldElement} from "@vaadin/vaadin-text-field";
 
 @customElement("task-list-view")
 export class TaskListView extends MobxLitElement {
   private binder = new Binder(this, TodoModel);
+
+  @query("#text-field")
+  private textfield?: TextFieldElement;
 
   render() {
     const { model } = this.binder;
@@ -19,7 +23,7 @@ export class TaskListView extends MobxLitElement {
     return html`
       <h1>My tasks</h1>
       <div class="form">
-        <vaadin-text-field ...=${field(model.task)}></vaadin-text-field>
+        <vaadin-text-field id="text-field" ...=${field(model.task)}></vaadin-text-field>
         <vaadin-button theme="primary" @click=${this.addTask}
           >Add</vaadin-button
         >
@@ -41,10 +45,23 @@ export class TaskListView extends MobxLitElement {
     `;
   }
 
+  protected firstUpdated() {
+    if (this.textfield) {
+      this.textfield.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          this.addTask();
+        }
+      });
+    }
+  }
+
   async addTask() {
     console.log("addTask");
     await this.binder.submitTo(store.saveTodo.bind(store));
     this.binder.clear();
+    if (this.textfield) {
+      this.textfield.focus();
+    }
   }
 
   updateTodoStatusChange(todo: Todo, e: CustomEvent) {

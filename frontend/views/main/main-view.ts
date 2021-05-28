@@ -20,6 +20,7 @@ export class MainView extends MobxLitElement {
   @property({ type: Object }) location = router.location;
   @property({ type: Array }) menuTabs: MenuTab[] = [
     { route: "tasks", name: "Task List" },
+    { route: "dashboard", name: "dashboard" },
   ];
   @property({ type: String }) projectName = "";
 
