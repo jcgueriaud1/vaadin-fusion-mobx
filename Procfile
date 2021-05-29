@@ -1,0 +1,1 @@
+web: java -jar target/state-management-1.0-SNAPSHOT.jar $PORT
