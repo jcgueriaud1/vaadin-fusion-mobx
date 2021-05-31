@@ -1,0 +1,4 @@
+task-list-view {
+  display: block;
+  padding: var(--lumo-space-m);
+}

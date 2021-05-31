@@ -10,7 +10,7 @@ class Store {
   socket?: WebSocket;
   stompClient?: CompatClient;
   constructor() {
-    makeAutoObservable(this);
+    makeAutoObservable(this, { init: false });
     this.init();
     this.connectSockJs();
   }

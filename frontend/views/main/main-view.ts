@@ -1,4 +1,3 @@
-import { MobxLitElement } from "@adobe/lit-mobx";
 import { CSSModule } from "@vaadin/flow-frontend/css-utils";
 import { AppLayoutElement } from "@vaadin/vaadin-app-layout/src/vaadin-app-layout";
 import "@vaadin/vaadin-app-layout/theme/lumo/vaadin-app-layout";
@@ -8,7 +7,8 @@ import "@vaadin/vaadin-tabs/theme/lumo/vaadin-tabs";
 import "@vaadin/vaadin-progress-bar";
 import { css, customElement, html, property } from "lit-element";
 import { router } from "../../index";
-import { store } from "../../store";
+import { store } from "../../stores/store";
+import { Layout } from "../../view";
 
 interface MenuTab {
   route: string;
@@ -16,7 +16,7 @@ interface MenuTab {
 }
 
 @customElement("main-view")
-export class MainView extends MobxLitElement {
+export class MainView extends Layout {
   @property({ type: Object }) location = router.location;
   @property({ type: Array }) menuTabs: MenuTab[] = [
     { route: "tasks", name: "Task List" },
