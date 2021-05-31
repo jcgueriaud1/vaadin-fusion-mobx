@@ -54,9 +54,7 @@
     "open": "^7.2.1",
     "sockjs-client": "1.5.0",
     "@stomp/stompjs": "6.0.0",
-    "@types/sockjs-client": "1.5.0",
-    "sortablejs": "1.13.0",
-    "@types/sortablejs": "1.10.6"
+    "@types/sockjs-client": "1.5.0"
   },
   "devDependencies": {
     "@types/validator": "13.1.0",
@@ -137,9 +135,7 @@
       "open": "^7.2.1",
       "sockjs-client": "1.5.0",
       "@stomp/stompjs": "6.0.0",
-      "@types/sockjs-client": "1.5.0",
-      "sortablejs": "1.13.0",
-      "@types/sortablejs": "1.10.6"
+      "@types/sockjs-client": "1.5.0"
     },
     "devDependencies": {
       "compression-webpack-plugin": "4.0.1",
@@ -169,6 +165,6 @@
       "workbox-precaching": "5.1.4",
       "webpack-manifest-plugin": "3.0.0"
     },
-    "hash": "6cf999c8413052aaef24a6672d97ba93708eed562defd3477e90b79c7748cece"
+    "hash": "ff7ee92a92fba31598bcea8321f95efcfb98480d9d7ec1c7b2d424f463ffef96"
   }
 }

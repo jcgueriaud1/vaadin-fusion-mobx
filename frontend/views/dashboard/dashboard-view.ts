@@ -9,7 +9,7 @@ import {store} from "../../stores/store";
 import {View} from "../../view";
 
 @customElement("dashboard-view")
-export class dashboardView extends View {
+export class DashboardView extends View {
 
   render() {
     return html`
