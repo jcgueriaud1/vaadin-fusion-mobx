@@ -20,6 +20,7 @@ export class MainView extends Layout {
   @property({ type: Object }) location = router.location;
   @property({ type: Array }) menuTabs: MenuTab[] = [
     { route: "tasks", name: "Task List" },
+    { route: "dashboard", name: "dashboard" },
   ];
   @property({ type: String }) projectName = "";
 
@@ -202,4 +203,5 @@ export class MainView extends Layout {
       `,
     ];
   }
+
 }
