@@ -1,5 +1,4 @@
-import {css, customElement, html, query} from "lit-element";
-import { MobxLitElement } from "@adobe/lit-mobx";
+import { customElement, html, query } from "lit-element";
 import "@vaadin/vaadin-button";
 import "@vaadin/vaadin-text-field";
 import "@vaadin/vaadin-checkbox";

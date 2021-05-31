@@ -1,6 +1,6 @@
 import { makeAutoObservable } from "mobx";
-import Todo from "./generated/com/example/application/Todo";
-import * as endpoint from "./generated/TodoEndpoint";
+import Todo from "../generated/com/example/application/Todo";
+import * as endpoint from "../generated/TodoEndpoint";
 
 import {CompatClient, Stomp} from "@stomp/stompjs";
 import * as SockJS from "sockjs-client";
