@@ -20,7 +20,6 @@ export class DashboardFlipView extends View {
       easing: 'ease-in-out',
       fill: 'both',
     };
-    const d = animationOptions.duration / store.todos.length;
     return html`
       <h1>Task Dashboard - Flip</h1>
       <div class="dashboard">
