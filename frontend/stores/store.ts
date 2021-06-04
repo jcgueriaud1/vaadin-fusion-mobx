@@ -16,7 +16,9 @@ class Store {
   }
 
   async init() {
-    this.setTodos(await endpoint.getTodos());
+    const todos = await endpoint.getTodos();
+    if (todos)
+      this.setTodos(todos);
   }
 
   private connectSockJs() {

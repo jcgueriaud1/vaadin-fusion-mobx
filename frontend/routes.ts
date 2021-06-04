@@ -34,6 +34,13 @@ export const routes = [
           await import('./views/dashboard/dashboard-view');
         },
       },
+      {
+        path: 'dashboard-flip',
+        component: 'dashboard-flip-view',
+        action: async () => {
+          await import('./views/dashboard-flip/dashboard-flip-view');
+        },
+      },
       // for server-side, the next magic line sends all unmatched routes:
       ...serverSideRoutes, // IMPORTANT: this must be the last entry in the array
     ],

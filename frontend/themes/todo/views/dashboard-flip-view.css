@@ -1,0 +1,4 @@
+dashboard-flip-view {
+    display: block;
+    padding: var(--lumo-space-l);
+}
