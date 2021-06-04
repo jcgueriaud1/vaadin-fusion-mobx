@@ -2,8 +2,8 @@ package com.example.application;
 
 import java.util.List;
 
+import com.vaadin.flow.server.auth.AnonymousAllowed;
 import com.vaadin.flow.server.connect.Endpoint;
-import com.vaadin.flow.server.connect.auth.AnonymousAllowed;
 
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 

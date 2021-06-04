@@ -1,4 +1,5 @@
-import { customElement, html, query } from "lit-element";
+import {  html } from "lit";
+import { customElement, query } from "lit/decorators";
 import "@vaadin/vaadin-button";
 import "@vaadin/vaadin-text-field";
 import "@vaadin/vaadin-checkbox";
@@ -25,8 +26,7 @@ export class TaskListView extends View {
       <h1>My tasks</h1>
       <div class="form">
         <vaadin-text-field id="text-field" ...=${field(model.task)}></vaadin-text-field>
-        <vaadin-button theme="primary" @click=${this.addTask}
-          >Add</vaadin-button
+        <vaadin-button theme="primary" @click=${this.addTask}>Add</vaadin-button
         >
       </div>
       <div class="tasks">
